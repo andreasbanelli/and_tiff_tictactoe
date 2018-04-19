@@ -1,0 +1,542 @@
+current directory: /home/andreas/Documents/dev/projet/tictactoe/.bundle/ruby/2.3.0/gems/gosu-0.13.3/ext/gosu
+/usr/share/rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20180419-3517-1rfxt5g.rb extconf.rb
+The Gosu gem requires some libraries to be installed system-wide.
+See the following site for a list:
+https://github.com/gosu/gosu/wiki/Getting-Started-on-Linux
+checking for TTF_RenderUTF8_Blended() in -lSDL2_ttf... yes
+checking for SDL_ttf.h... yes
+checking for main() in -lopenal... yes
+checking for AL/al.h... yes
+creating Makefile
+
+current directory: /home/andreas/Documents/dev/projet/tictactoe/.bundle/ruby/2.3.0/gems/gosu-0.13.3/ext/gosu
+make "DESTDIR=" clean
+
+current directory: /home/andreas/Documents/dev/projet/tictactoe/.bundle/ruby/2.3.0/gems/gosu-0.13.3/ext/gosu
+make "DESTDIR="
+compiling ../../src/stb_vorbis.c
+In file included from ../../src/stb_vorbis.c:553:0:
+../../src/stb_vorbis.c: In function ‘compute_codewords’:
+../../src/stb_vorbis.c:1080:24: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+          assert(len[i] >= 0 && len[i] < 32);
+                        ^
+../../src/stb_vorbis.c: In function ‘decode_residue’:
+../../src/stb_vorbis.c:888:41: warning: statement with no effect [-Wunused-value]
+ #define temp_free(f,p)                  0
+                                         ^
+../../src/stb_vorbis.c:2264:4: note: in expansion of macro ‘temp_free’
+    temp_free(f,part_classdata);
+    ^
+../../src/stb_vorbis.c: In function ‘inverse_mdct’:
+../../src/stb_vorbis.c:888:41: warning: statement with no effect [-Wunused-value]
+ #define temp_free(f,p)                  0
+                                         ^
+../../src/stb_vorbis.c:2913:4: note: in expansion of macro ‘temp_free’
+    temp_free(f,buf2);
+    ^
+compiling ../../src/RubyGosu.cxx
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+../../src/RubyGosu.cxx: In function ‘void Gosu::load_bitmap(Gosu::Bitmap&, VALUE)’:
+../../src/RubyGosu.cxx:2316:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if (RSTRING_LEN(blob) == size) {
+                               ^
+../../src/RubyGosu.cxx:2320:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         else if (RSTRING_LEN(blob) == size * sizeof(float)) {
+                                    ^
+../../src/RubyGosu.cxx: In function ‘VALUE _wrap_Font_draw_rot(int, VALUE*, VALUE)’:
+../../src/RubyGosu.cxx:5691:111: warning: ‘void Gosu::Font::draw_rot(const string&, double, double, Gosu::ZPos, double, double, double, Gosu::Color, Gosu::AlphaMode) const’ is deprecated [-Wdeprecated-declarations]
+       ((Gosu::Font const *)arg1)->draw_rot((std::string const &)*arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10);
+                                                                                                               ^
+In file included from ../../Gosu/Gosu.hpp:16:0,
+                 from ../../src/RubyGosu.cxx:2261:
+../../Gosu/Font.hpp:77:14: note: declared here
+         void draw_rot(const std::string& text, double x, double y, ZPos z, double angle,
+              ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TimingWin.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/BitmapIO.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/BitmapIO.cpp:12:0:
+../../src/stb_image.h: In function ‘int stbi__psd_is16(stbi__context*)’:
+../../src/stb_image.h:6897:22: warning: variable ‘dummy’ set but not used [-Wunused-but-set-variable]
+    int channelCount, dummy, depth;
+                      ^
+../../src/BitmapIO.cpp: In function ‘int {anonymous}::read_callback(void*, char*, int)’:
+../../src/BitmapIO.cpp:22:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         size_t actual_size = (size < remaining ? size : remaining);
+                                    ^
+In file included from ../../src/BitmapIO.cpp:12:0:
+../../src/stb_image.h: At global scope:
+../../src/stb_image.h:1134:13: warning: ‘void stbi__float_postprocess(float*, int*, int*, int*, int)’ defined but not used [-Wunused-function]
+ static void stbi__float_postprocess(float *result, int *x, int *y, int *comp, int req_comp)
+             ^
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/AudioImpl.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+../../src/AudioImpl.cpp: In function ‘Gosu::Channel Gosu::allocate_channel()’:
+../../src/AudioImpl.cpp:64:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 1; i < CHANNELS; ++i) {
+                       ^
+../../src/AudioImpl.cpp: In function ‘bool Gosu::channel_expired(int, int)’:
+../../src/AudioImpl.cpp:80:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     return channel < 0 || channel >= CHANNELS || _tokens[channel] != token;
+                                   ^
+../../src/AudioImpl.cpp: In function ‘ALuint Gosu::al_source_for_channel(int)’:
+../../src/AudioImpl.cpp:85:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (channel <= 0 || channel >= CHANNELS) {
+                                 ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Font.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/FormattedString.hpp:3:0,
+                 from ../../src/Font.cpp:1:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/GosuAppDelegate.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/FileWin.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/DirectoriesUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TextApple.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TexChunk.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/TexChunk.hpp:3:0,
+                 from ../../src/TexChunk.cpp:1:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+In file included from ../../src/DrawOpQueue.hpp:4:0,
+                 from ../../src/TexChunk.cpp:2:
+../../src/DrawOp.hpp: In member function ‘void Gosu::DrawOp::perform(const Gosu::DrawOp*) const’:
+../../src/DrawOp.hpp:108:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (unsigned i = 0; i < vertices_or_block_index; i++) {
+                                    ^
+In file included from /usr/include/c++/5/cassert:43:0,
+                 from ../../src/DrawOpQueue.hpp:8,
+                 from ../../src/TexChunk.cpp:2:
+../../src/DrawOpQueue.hpp: In member function ‘void Gosu::DrawOpQueue::perform_draw_ops_andCode()’:
+../../src/DrawOpQueue.hpp:155:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 assert (block_index < gl_blocks.size());
+                                     ^
+../../src/TexChunk.cpp: In member function ‘virtual void Gosu::TexChunk::insert(const Gosu::Bitmap&, int, int)’:
+../../src/TexChunk.cpp:88:48: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (x < 0 || y < 0 || x + original.width() > w || y + original.height() > h) {
+                                                ^
+../../src/TexChunk.cpp:88:77: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (x < 0 || y < 0 || x + original.width() > w || y + original.height() > h) {
+                                                                             ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/WinUtility.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TextWin.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/UtilityApple.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/LargeImageData.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/LargeImageData.hpp:3:0,
+                 from ../../src/LargeImageData.cpp:1:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/InputUIKit.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Image.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Color.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/WindowUIKit.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/DirectoriesWin.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Audio.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/Audio.cpp:17:0:
+../../src/MPEGFile.hpp: In member function ‘virtual std::size_t Gosu::MPEGFile::read_data(void*, std::size_t)’:
+../../src/MPEGFile.hpp:72:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                    && position_ != contents_.size()) {
+                                 ^
+In file included from /usr/include/c++/5/cassert:43:0,
+                 from ../../src/Audio.cpp:8:
+../../src/MPEGFile.hpp: In member function ‘virtual void Gosu::MPEGFile::rewind()’:
+../../src/MPEGFile.hpp:87:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             assert (position_ >= 0 && position_ <= contents_.size());
+                                                 ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Window.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Channel.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Texture.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/Texture.hpp:4:0,
+                 from ../../src/Texture.cpp:1:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/GosuGLView.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Utility.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TimingUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Macro.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/Macro.hpp:3:0,
+                 from ../../src/Macro.cpp:1:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+In file included from ../../src/DrawOpQueue.hpp:4:0,
+                 from ../../src/Macro.cpp:2:
+../../src/DrawOp.hpp: In member function ‘void Gosu::DrawOp::perform(const Gosu::DrawOp*) const’:
+../../src/DrawOp.hpp:108:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (unsigned i = 0; i < vertices_or_block_index; i++) {
+                                    ^
+In file included from /usr/include/c++/5/cassert:43:0,
+                 from ../../src/DrawOpQueue.hpp:8,
+                 from ../../src/Macro.cpp:2:
+../../src/DrawOpQueue.hpp: In member function ‘void Gosu::DrawOpQueue::perform_draw_ops_andCode()’:
+../../src/DrawOpQueue.hpp:155:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 assert (block_index < gl_blocks.size());
+                                     ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Bitmap.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/FormattedString.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/FormattedString.hpp:3:0,
+                 from ../../src/FormattedString.cpp:1:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+../../src/FormattedString.cpp: In constructor ‘Gosu::FormattedString::FormattedString(const wchar_t*, unsigned int)’:
+../../src/FormattedString.cpp:133:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if (end_of_entity >= len) {
+                                   ^
+../../src/FormattedString.cpp: In member function ‘std::__cxx11::wstring Gosu::FormattedString::unformat() const’:
+../../src/FormattedString.cpp:159:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < characters.size(); ++i) {
+                       ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TimingApple.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Version.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Graphics.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/DrawOp.hpp:3:0,
+                 from ../../src/Graphics.cpp:2:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+In file included from ../../src/Graphics.cpp:2:0:
+../../src/DrawOp.hpp: In member function ‘void Gosu::DrawOp::perform(const Gosu::DrawOp*) const’:
+../../src/DrawOp.hpp:108:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (unsigned i = 0; i < vertices_or_block_index; i++) {
+                                    ^
+In file included from /usr/include/c++/5/cassert:43:0,
+                 from ../../src/DrawOpQueue.hpp:8,
+                 from ../../src/Graphics.cpp:3:
+../../src/DrawOpQueue.hpp: In member function ‘void Gosu::DrawOpQueue::perform_draw_ops_andCode()’:
+../../src/DrawOpQueue.hpp:155:37: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 assert (block_index < gl_blocks.size());
+                                     ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/BlockAllocator.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Text.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/FormattedString.hpp:3:0,
+                 from ../../src/Text.cpp:1:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+../../src/Text.cpp: In function ‘Gosu::Bitmap Gosu::create_text(const string&, const string&, unsigned int, unsigned int)’:
+../../src/Text.cpp:325:23: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < lines.size(); ++i) {
+                       ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/ResolutionApple.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Transform.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+In file included from ../../src/Transform.cpp:4:0:
+../../src/GraphicsImpl.hpp: In function ‘void Gosu::multiply_bitmap_alpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/GraphicsImpl.hpp:104:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y) {
+                           ^
+../../src/GraphicsImpl.hpp:105:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x) {
+                               ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Input.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+../../src/Input.cpp: In member function ‘bool Gosu::Input::Impl::feed_sdl_event(const SDL_Event*)’:
+../../src/Input.cpp:112:69: warning: comparison between ‘const enum SDL_Scancode’ and ‘enum Gosu::ButtonName’ [-Wenum-compare]
+                 if (e->key.repeat == 0 && e->key.keysym.scancode <= KB_RANGE_END) {
+                                                                     ^
+../../src/Input.cpp: In member function ‘void Gosu::Input::Impl::poll_gamepads()’:
+../../src/Input.cpp:154:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < available_gamepads; ++i) {
+                           ^
+../../src/Input.cpp:158:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             if (i < game_controllers.size()) {
+                   ^
+../../src/Input.cpp:170:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int j = 0; j < current_gamepad.size(); ++j) {
+                               ^
+../../src/Input.cpp:185:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < any_gamepad.size(); ++j) {
+                           ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TextUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+../../src/TextUnix.cpp: In member function ‘unsigned int Gosu::PangoRenderer::text_width(const string&, const string&, unsigned int, unsigned int)’:
+../../src/TextUnix.cpp:64:13: warning: ‘void g_type_init()’ is deprecated [-Wdeprecated-declarations]
+             g_type_init();
+             ^
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24:0,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:23,
+                 from /usr/include/pango-1.0/pango/pango-types.h:26,
+                 from /usr/include/pango-1.0/pango/pango-font.h:26,
+                 from /usr/include/pango-1.0/pango/pango-attributes.h:25,
+                 from /usr/include/pango-1.0/pango/pango.h:25,
+                 from ../../src/TextUnix.cpp:10:
+/usr/include/glib-2.0/gobject/gtype.h:681:23: note: declared here
+ void                  g_type_init                    (void);
+                       ^
+../../src/TextUnix.cpp:64:13: warning: ‘void g_type_init()’ is deprecated [-Wdeprecated-declarations]
+             g_type_init();
+             ^
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24:0,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:23,
+                 from /usr/include/pango-1.0/pango/pango-types.h:26,
+                 from /usr/include/pango-1.0/pango/pango-font.h:26,
+                 from /usr/include/pango-1.0/pango/pango-attributes.h:25,
+                 from /usr/include/pango-1.0/pango/pango.h:25,
+                 from ../../src/TextUnix.cpp:10:
+/usr/include/glib-2.0/gobject/gtype.h:681:23: note: declared here
+ void                  g_type_init                    (void);
+                       ^
+../../src/TextUnix.cpp:64:25: warning: ‘void g_type_init()’ is deprecated [-Wdeprecated-declarations]
+             g_type_init();
+                         ^
+In file included from /usr/include/glib-2.0/gobject/gobject.h:24:0,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:29,
+                 from /usr/include/glib-2.0/glib-object.h:23,
+                 from /usr/include/pango-1.0/pango/pango-types.h:26,
+                 from /usr/include/pango-1.0/pango/pango-font.h:26,
+                 from /usr/include/pango-1.0/pango/pango-attributes.h:25,
+                 from /usr/include/pango-1.0/pango/pango.h:25,
+                 from ../../src/TextUnix.cpp:10:
+/usr/include/glib-2.0/gobject/gtype.h:681:23: note: declared here
+ void                  g_type_init                    (void);
+                       ^
+../../src/TextUnix.cpp:68:23: warning: ‘PangoContext* pango_ft2_get_context(double, double)’ is deprecated: Use 'pango_font_map_create_context' instead [-Wdeprecated-declarations]
+             context = pango_ft2_get_context(dpi_x, dpi_y);
+                       ^
+In file included from ../../src/TextUnix.cpp:11:0:
+/usr/include/pango-1.0/pango/pangoft2.h:111:20: note: declared here
+ PangoContext      *pango_ft2_get_context          (double dpi_x,
+                    ^
+../../src/TextUnix.cpp:68:23: warning: ‘PangoContext* pango_ft2_get_context(double, double)’ is deprecated: Use 'pango_font_map_create_context' instead [-Wdeprecated-declarations]
+             context = pango_ft2_get_context(dpi_x, dpi_y);
+                       ^
+In file included from ../../src/TextUnix.cpp:11:0:
+/usr/include/pango-1.0/pango/pangoft2.h:111:20: note: declared here
+ PangoContext      *pango_ft2_get_context          (double dpi_x,
+                    ^
+../../src/TextUnix.cpp:68:57: warning: ‘PangoContext* pango_ft2_get_context(double, double)’ is deprecated: Use 'pango_font_map_create_context' instead [-Wdeprecated-declarations]
+             context = pango_ft2_get_context(dpi_x, dpi_y);
+                                                         ^
+In file included from ../../src/TextUnix.cpp:11:0:
+/usr/include/pango-1.0/pango/pangoft2.h:111:20: note: declared here
+ PangoContext      *pango_ft2_get_context          (double dpi_x,
+                    ^
+../../src/TextUnix.cpp: In member function ‘void Gosu::PangoRenderer::draw_text(Gosu::Bitmap&, const string&, int, int, Gosu::Color, const string&, unsigned int, unsigned int)’:
+../../src/TextUnix.cpp:140:42: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if (y + y2 < 0 || y + y2 >= bitmap.height()) break;
+                                          ^
+../../src/TextUnix.cpp:143:46: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     if (x + x2 < 0 || x + x2 >= bitmap.width()) break;
+                                              ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TextTTFWin.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/UtilityWin.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/FileUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::resize(size_t)’:
+../../src/FileUnix.cpp:74:35: warning: ignoring return value of ‘int ftruncate(int, __off_t)’, declared with attribute warn_unused_result [-Wunused-result]
+     ftruncate(pimpl->fd, new_size);
+                                   ^
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::read(size_t, size_t, void*) const’:
+../../src/FileUnix.cpp:86:47: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+         ::read(pimpl->fd, dest_buffer, length);
+                                               ^
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::write(size_t, size_t, const void*)’:
+../../src/FileUnix.cpp:94:46: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+     ::write(pimpl->fd, source_buffer, length);
+                                              ^
+At global scope:
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/DirectoriesApple.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Inspection.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/IO.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/TextInput.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Math.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/WinMain.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/Resolution.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+compiling ../../src/GosuViewController.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++
+cc1plus: warning: unrecognized command line option ‘-Wno-reserved-user-defined-literal’
+linking shared-object gosu.so
+
+current directory: /home/andreas/Documents/dev/projet/tictactoe/.bundle/ruby/2.3.0/gems/gosu-0.13.3/ext/gosu
+make "DESTDIR=" install
+/usr/bin/install -m 0755 gosu.so ./.gem.20180419-3517-6kug1k
