@@ -1,6 +1,8 @@
 
 
 class Game 
+
+  #le début d'une partie est initialisée, avec 2 joueurs, et le premier joueur qui est aussi le "current player"
     def initialize
         puts "Bienvenu à ce magnifique jeu du morpion !"
         puts "Quel est le nom du joueur 1 ? "
@@ -27,6 +29,7 @@ def switch_player
       end 
     end 
 
+
       def move
         puts "#{@current_player.name} , where do you want to make your #{@current_player.value} ? (number from 1 to 9)"
         cell = gets.chomp.to_i
@@ -41,7 +44,7 @@ def switch_player
       
       
      
-      
+      #on crée une boucle pour jouer, on chaque joueur va jouer tour à tour, jusqu'à ce qu'il y ait victoire ou nulle
       def play
         loop do
           @board.display
@@ -65,15 +68,18 @@ def switch_player
       end
     
       
+      #si qqn gagne cela signifique la partie est terminée
       def game_over?
         @board.is_win? 
       end
-      
+      #si toute la grille est remplie, alors il y a égalité
       def game_over_deuce
         @board.cell.all? { |cell| cell.is_a? String }
       end 
 
 
+
+      #on propose de relancer une partie 
       def play_again
         print "Do you want to play again ? (Y/n)"
         STDOUT.flush
