@@ -1,5 +1,4 @@
-# and_tiff_tictactoe
-
+TIC TAC TOE ! 
 Tic Tac Toe game ! 
 Réalisé par Andréas et Tiff 
 
